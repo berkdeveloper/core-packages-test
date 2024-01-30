@@ -1,9 +1,8 @@
 ﻿using Core.Application.Utilities.Common.Responses.Abstract;
-using Core.Application.Utilities.Common.Responses.ComplexTypes;
 
-namespace Core.Application.Utilities.Common.Responses.Concrete;
+namespace Core.Application.Utilities.Common.Responses.ComplexTypes;
 
-public class ListBaseResponse : ResponseBase, IPaginateResponse
+public class ArrayItemsBaseResponse : ResponseBase, IPaginateResponse
 {
     public int Size { get; set; }
 

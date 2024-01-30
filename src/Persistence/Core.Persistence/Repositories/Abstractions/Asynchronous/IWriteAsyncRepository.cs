@@ -11,4 +11,6 @@ public interface IWriteAsyncRepository<TAggregate, TKey> where TAggregate : Aggr
     Task DeleteAsync(TAggregate entity, bool permanent = false);
 
     Task DeleteRangeAsync(ICollection<TAggregate> entities, bool permanent = false);
+
+    Task SaveChangesAsync();
 }

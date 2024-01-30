@@ -1,6 +1,4 @@
-﻿using Core.Domain.Core;
-
-namespace Core.Domain.Filters.Abstractions;
+﻿namespace Core.Domain.Filters.Abstractions;
 
 public interface IFilterStrategy<TAggregate>
 {

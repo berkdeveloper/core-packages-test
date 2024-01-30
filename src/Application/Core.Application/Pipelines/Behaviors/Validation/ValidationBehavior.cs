@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 using MediatR;
-using ValidationException = Core.Application.Common.Exceptions.ValidationException;
+using ValidationException = Core.Application.Exceptions.ValidationException;
 
 namespace Core.Application.Pipelines.Behaviors.Validation;
 

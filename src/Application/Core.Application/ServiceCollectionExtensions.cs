@@ -1,4 +1,5 @@
-﻿using Core.Application.Pipelines.Behaviors.Transaction;
+﻿using Core.Application.Pipelines.Behaviors.Logging;
+using Core.Application.Pipelines.Behaviors.Transaction;
 using Core.Application.Pipelines.Behaviors.Validation;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
@@ -11,6 +12,7 @@ public static class ServiceCollectionExtensions
     {
         services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
         services.AddTransient(typeof(IPipelineBehavior<,>), typeof(TransactionScopeBehavior<,>));
+        services.AddScoped(typeof(IPipelineBehavior<,>), typeof(LoggingBehavior<,>));
         return services;
     }
 }

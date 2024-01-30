@@ -1,7 +1,7 @@
 ﻿using Core.Domain.Primitives;
 using FluentValidation.Results;
 
-namespace Core.Application.Common.Exceptions;
+namespace Core.Application.Exceptions;
 
 public sealed class ValidationException : Exception
 {

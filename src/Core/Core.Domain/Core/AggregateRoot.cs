@@ -1,6 +1,6 @@
 ﻿namespace Core.Domain.Core;
 
-public abstract class AggregateRoot<TKey> : Entity<TKey>, IEntityTimestamps 
+public abstract class AggregateRoot<TKey> : Entity<TKey>, IEntityTimestamps
 {
     public AggregateRoot()
     {
@@ -8,7 +8,7 @@ public abstract class AggregateRoot<TKey> : Entity<TKey>, IEntityTimestamps
         CreatedDate = DateTime.UtcNow;
     }
 
-    public AggregateRoot(TKey id) => Id = id;
+    public AggregateRoot(TKey id) : this() => Id = id;
 
     public DateTime CreatedDate { get; private set; }
     public DateTime? UpdatedDate { get; private set; }
